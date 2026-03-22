@@ -3,6 +3,8 @@ import Sidebar from '../components/Sidebar';
 import ProductCard from '../components/ProductCard';
 import API_URL from '../config/api';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);

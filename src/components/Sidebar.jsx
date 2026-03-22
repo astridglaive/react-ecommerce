@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+
 const Sidebar = () => {
     const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("http://localhost:5001/api/categories")
+        fetch(`${API_URL}/api/categories`)
             .then((res) => res.json())
             .then((data) => {
                 setCategories(data);

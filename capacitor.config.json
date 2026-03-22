@@ -1,0 +1,6 @@
+{
+  "appId": "com.example.ecommerce",
+  "appName": "ecommerce",
+  "webDir": "dist",
+  "npmClient": "npm"
+}
